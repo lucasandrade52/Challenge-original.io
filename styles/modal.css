@@ -1,0 +1,117 @@
+/* ------------ Modal --------- */
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(32, 32, 32, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.content-modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 602px;
+    width: 445px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin: 62px 418px 104px;
+    position: relative;
+}
+
+.content-modal .close {
+    height: 51px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 19px 16px 0;
+}
+
+.content-modal .close span img {
+    height: 19px;
+    width: 16px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.modal .close span img:hover {
+    opacity: 0.8;
+}
+
+.content-modal .modal_addproduct img {
+    height: 358.65px;
+    width: 305px;
+    margin: 0px 70px;
+}
+
+.content-modal h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #DE8F75;
+    margin: 12px 70px;
+}
+
+.content-modal .modal_button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.content-modal .modal_button button {
+    width: 305px;
+    height: 50px;
+    background: #32917B;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.content-modal .modal_button button:hover {
+background: #025c47;
+}
+
+.content-modal .modal_button a {
+    width: 290px;
+    height: 36px;
+    text-decoration-line: underline;
+    color: #AEB6C1;
+    margin: 7px 78px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+}
+
+.content-modal .modal_button a:hover {
+    color: black;
+}
+
+/*---MODAL ACTIVE---*/
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
