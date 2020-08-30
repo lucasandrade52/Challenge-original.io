@@ -17,14 +17,15 @@ const Product = {
     },
 }
 
-const products = document.querySelectorAll('.carrousel')
+const products = document.querySelectorAll('.carrousel img')
+const cart = document.querySelector('.cart_field')
+const closeCart = document.querySelector('.cart .icon-close')
 
 products.forEach(product => {
-
-    const infor = Product [ product.id ]
-
+    
     product.addEventListener('click', function() {
         const modal = document.querySelector('.modal')
+        const infor = Product[ product.id ]
         modal.style.display = 'flex';
 
         modal.innerHTML = `
@@ -40,7 +41,7 @@ products.forEach(product => {
             <button type="submit">Finalizar Compra</button>
             <a href="#" class="keepbuy">Continuar Comprando</a>
         </div>
-    </div>
+        </div>
         `
     })
 })
@@ -49,4 +50,12 @@ document.addEventListener('click', function() {
     if (event.target.classList.contains('icon-close')) {
         document.querySelector('.modal').style.display = 'none'
     }
+})
+
+cart.addEventListener('click', function() {
+    document.body.classList.add("opened-cart")
+})
+
+closeCart.addEventListener('click', function() {
+    document.body.classList.remove("opened-cart")
 })
